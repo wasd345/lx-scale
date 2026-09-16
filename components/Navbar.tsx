@@ -5,7 +5,6 @@ import { usePathname } from 'next/navigation';
 import ToggleLang from './ToggleLang';
 import { Suspense } from 'react';
 import { useScopedI18n } from '@/locales/client';
-import GitHubStarButton from './GitHubStarButton';
 
 export function Navbar() {
   const pathname = usePathname();
@@ -42,14 +41,6 @@ export function Navbar() {
           >
             {t('questionsList')}
           </Link>
-          <GitHubStarButton
-            user="lxdao-official"
-            repo="lx-scale"
-            size="normal"
-            showCount={true}
-          />
-
-
           <Suspense fallback={<div className="w-8 h-8" />}>
             <ToggleLang />
           </Suspense>

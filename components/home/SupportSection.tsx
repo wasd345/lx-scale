@@ -1,5 +1,5 @@
 import { Button } from '@/components/ui/button';
-import { ExternalLink, Wallet, Github, Heart, Mail } from 'lucide-react';
+import { Wallet, Heart, Mail } from 'lucide-react';
 import { getScopedI18n } from '@/locales/server';
 
 export async function SupportSection() {
@@ -49,23 +49,7 @@ export async function SupportSection() {
           </div>
         </div>
 
-        <div className="mt-16 grid grid-cols-1 md:grid-cols-3 gap-8">
-          <div className="bg-background border rounded-xl p-6 shadow-sm flex flex-col items-center text-center">
-            <Github className="h-8 w-8 text-primary mb-4" />
-            <h3 className="text-lg font-medium mb-2">{t('openSourceTitle')}</h3>
-            <p className="text-sm text-muted-foreground mb-4">
-              {t('openSourceDescription')}
-            </p>
-            <a
-              href="https://github.com/lxdao-official/lx-scale"
-              target="_blank"
-              className="text-primary text-sm hover:underline flex items-center gap-1"
-            >
-              <span>{t('visitGithub')}</span>
-              <ExternalLink className="h-3 w-3" />
-            </a>
-          </div>
-
+        <div className="mt-16 grid grid-cols-1 md:grid-cols-2 gap-8">
           <div className="bg-background border rounded-xl p-6 shadow-sm flex flex-col items-center text-center">
             <Heart className="h-8 w-8 text-primary mb-4" />
             <h3 className="text-lg font-medium mb-2">{t('shareTitle')}</h3>

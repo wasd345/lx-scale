@@ -32,18 +32,6 @@ export async function HeroSection() {
                   </span>
                 </Button>
               </Link>
-              <Link
-                href="https://github.com/lxdao-official/lx-scale"
-                target="_blank"
-              >
-                <Button
-                  size="lg"
-                  variant="outline"
-                  className="px-8 py-6 text-lg w-full sm:w-auto"
-                >
-                  {t('viewSourceCode')}
-                </Button>
-              </Link>
             </div>
 
             <div className="flex flex-col sm:flex-row gap-6 pt-4">

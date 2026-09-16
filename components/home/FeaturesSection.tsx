@@ -1,5 +1,4 @@
 import {
-  GithubIcon,
   Brain,
   Lock,
   LineChart,
@@ -20,14 +19,6 @@ export async function FeaturesSection() {
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-          <div className="bg-background border rounded-xl p-8 shadow-sm hover:shadow-md transition-shadow">
-            <div className="bg-primary/10 p-3 rounded-full w-fit mb-6">
-              <GithubIcon className="h-6 w-6 text-primary" />
-            </div>
-            <h3 className="text-xl font-semibold mb-3">{t('openSource')}</h3>
-            <p className="text-muted-foreground">{t('openSourceDesc')}</p>
-          </div>
-
           <div className="bg-background border rounded-xl p-8 shadow-sm hover:shadow-md transition-shadow">
             <div className="bg-primary/10 p-3 rounded-full w-fit mb-6">
               <Brain className="h-6 w-6 text-primary" />

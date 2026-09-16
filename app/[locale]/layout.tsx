@@ -120,9 +120,6 @@ export default async function RootLayout({
         url: 'https://www.lxscale.xyz/logo.png'
       }
     },
-    sameAs: [
-      'https://github.com/lxdao-official/lx-scale'
-    ]
   };
 
   return (

@@ -46,15 +46,6 @@ export async function SponsorsSection() {
         <div className="mt-16 text-center">
           <p className="text-sm text-muted-foreground">
             {t('supportMessage', {
-              githubLink: (
-                <a
-                  href="https://github.com/lxdao-official/lx-scale"
-                  target="_blank"
-                  className="text-primary hover:underline"
-                >
-                  GitHub
-                </a>
-              ),
               contactLink: (
                 <a href="#" className="text-primary hover:underline">
                   {t('contactUs')}

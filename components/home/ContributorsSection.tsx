@@ -1,4 +1,4 @@
-import { Code, Lightbulb, Palette, Heart, Star, Github } from 'lucide-react';
+import { Code, Lightbulb, Palette, Heart, Star } from 'lucide-react';
 import Image from 'next/image';
 
 import { getScopedI18n, getCurrentLocale } from '@/locales/server';
@@ -16,7 +16,6 @@ interface Contributor {
   roleName: string;
   role: Role;
   avatarUrl: string;
-  github?: string;
 }
 
 export async function ContributorsSection() {
@@ -29,33 +28,28 @@ export async function ContributorsSection() {
       roleName: t('developer'),
       role: Role.Developer,
       avatarUrl: 'https://avatars.githubusercontent.com/u/47655472',
-      github: '0xhardman',
     },
     {
       name: 'ctyweb3',
       roleName: t('developer'),
       role: Role.Developer,
       avatarUrl: 'https://avatars.githubusercontent.com/u/173652098',
-      github: 'ctyweb3',
     },
     {
       name: 'Neal',
       roleName: t('developer'),
       role: Role.Developer,
       avatarUrl: 'https://avatars.githubusercontent.com/u/13863422',
-      github: 'snaildarter',
     }, {
       name: 'Keylen',
       roleName: t('developer'),
       role: Role.Developer,
       avatarUrl: 'https://avatars.githubusercontent.com/u/17230944',
-      github: 'BiscuitCoder',
     }, {
       name: 'Sacultor',
       roleName: t('developer'),
       role: Role.Developer,
       avatarUrl: 'https://avatars.githubusercontent.com/u/190158638',
-      github: 'Sacultor',
     },
   ];
 
@@ -106,17 +100,6 @@ export async function ContributorsSection() {
                 {getRoleIcon(contributor.role)}
                 <span>{contributor.roleName}</span>
               </div>
-              {contributor.github && (
-                <a
-                  href={`https://github.com/${contributor.github}`}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="mt-2 text-xs text-primary flex items-center gap-1 hover:underline"
-                >
-                  <Github className="h-3 w-3" />
-                  <span>{contributor.github}</span>
-                </a>
-              )}
             </div>
           ))}
         </div>
@@ -156,21 +139,6 @@ export async function ContributorsSection() {
           </div>
         </div>
 
-        <div className="mt-12 text-center">
-          <p className="text-muted-foreground">
-            {t('callToAction', {
-              githubRepo: (
-                <a
-                  href="https://github.com/lxdao-official/lx-scale"
-                  target="_blank"
-                  className="text-primary hover:underline"
-                >
-                  {t('github')}
-                </a>
-              ),
-            })}
-          </p>
-        </div>
       </div>
     </section>
   );
