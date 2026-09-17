@@ -34,7 +34,7 @@ export default {
             completelyFree: 'Completely Free',
             localProcessing: 'Local Processing',
             projectPurpose: 'Project Purpose',
-            paidServices: 'The current market is filled with paid mental health assessment services that dominate search results through SEO, yet many of these assessment questionnaires are actually open-source and free.',
+            paidServices: 'The current market is filled with paid mental health assessment services that dominate search results through SEO, yet many of these assessment questionnaires are actually free to use.',
             economicBurden: 'This business model imposes unnecessary financial burdens on those seeking mental health support (especially frustrating when you complete the assessment only to find out results require payment).',
             breakBarrier: 'LXScale aims to break this barrier by providing truly free, no-hidden-charge mental health assessment services, ensuring everyone has access to basic mental health resources.',
             lxSpirit: 'This project fully embodies the LX spirit, leveraging technology to empower mental health and build public quality in the virtual world.',
