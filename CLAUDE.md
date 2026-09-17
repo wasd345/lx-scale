@@ -4,7 +4,7 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 
 ## Project Overview
 
-LXScale is a free, open-source mental health assessment platform that provides psychological screening tools. Currently implements 12 questionnaires (OCD/Y-BOCS, SCL-90, SDS, GAD-7, PHQ-9, PSS-10, DASS-21, BDI-2, ISI, ADHD, GD, NPD) with AI-driven analysis through DeepSeek API.
+LXScale is a free, open-source mental health assessment platform that provides psychological screening tools. Currently implements 12 questionnaires (OCD/Y-BOCS, SCL-90, SDS, GAD-7, PHQ-9, PSS-10, DASS-21, BDI-2, ISI, ADHD, GD, NPD).
 
 ## Development Commands
 
@@ -34,7 +34,6 @@ npm run lint
 - **Shadcn/ui**: Component library with Radix UI primitives
 - **Next-international**: i18n support for zh/en locales
 - **Sonner**: Toast notifications
-- **DeepSeek API**: AI-powered result analysis
 - **RainbowKit**: Web3 integration (currently commented out)
 
 ### Core Architecture
@@ -52,18 +51,11 @@ npm run lint
 - Questionnaire exports consolidated in `questionairies/zh.ts` and `questionairies/en.ts`
 - Translation files in `locales/[locale]/` for UI strings and result interpretations
 
-#### API Integration
-- **Chat API**: `/api/chat/route.ts` handles AI analysis requests
-- **Rate Limiting**: IP-based rate limiting (10 requests/minute)
-- **Streaming Support**: Supports both regular and streaming responses
-- **Environment Variable**: `DEEPSEEK_API_KEY` for API authentication
-
 ### Data Flow
 1. User selects questionnaire from list (locale-aware via `useQuestionnaire()`)
 2. Answers collected in `QuestionnaireTest.tsx` component
 3. Calculator component processes raw answers into scores
 4. Result component displays scores, interpretations, and recommendations
-5. Optional AI chat for personalized analysis via DeepSeek API
 
 ## Adding New Questionnaires
 
@@ -76,7 +68,6 @@ npm run lint
 
 ## Important Notes
 
-- DeepSeek API key should be set via `DEEPSEEK_API_KEY` environment variable
 - All questionnaires support answer persistence via browser localStorage
 - Result sharing via URL with compressed answer data (LZ-string compression)
 - Each questionnaire must implement its own scoring algorithm in calculator component

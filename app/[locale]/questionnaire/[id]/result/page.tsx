@@ -52,10 +52,8 @@ export default function QuestionnaireResultPage({
 
   // Store decoded answers
   const [decodedAnswers, setDecodedAnswers] = useState<string[]>([]);
-  // Conversation limit status
-  const [isChatLimitReached, setIsChatLimitReached] = useState(false);
 
-  // Construct question-option text kv pairs from decoded answers for AI
+  // Construct question-option text pairs for copying result data
   const questionnaireResults: Record<string, string> = useMemo(() => {
     if (!questionnaire) return {};
     const obj: Record<string, string> = {};
@@ -106,7 +104,6 @@ export default function QuestionnaireResultPage({
       questionnaire={questionnaire}
       answers={decodedAnswers}
       questionnaireResults={questionnaireResults}
-      isChatLimitReached={isChatLimitReached}
     >
       <AnswerList
         questions={questionnaire.questions}
@@ -115,11 +112,7 @@ export default function QuestionnaireResultPage({
       />
       <ResultAnalysis questionnaireId={id} answers={decodedAnswers} />
 
-      <Recommendations
-        questionnaireId={id}
-        questionnaireResults={questionnaireResults}
-        onChatLimitReached={setIsChatLimitReached}
-      />
+      <Recommendations />
     </ResultContainer>
   );
 }

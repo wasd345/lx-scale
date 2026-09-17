@@ -13,10 +13,9 @@ interface ResultContainerProps {
   questionnaire?: Questionnaire;
   answers?: string[];
   questionnaireResults?: Record<string, string>;
-  isChatLimitReached?: boolean;
 }
 
-export function ResultContainer({ title, id, children, questionnaire, answers, questionnaireResults, isChatLimitReached = false }: ResultContainerProps) {
+export function ResultContainer({ title, id, children, questionnaire, answers, questionnaireResults }: ResultContainerProps) {
   const t = useScopedI18n(
     'component.questionnaire.result.public.resultContainer'
   );
@@ -73,18 +72,6 @@ export function ResultContainer({ title, id, children, questionnaire, answers, q
           <div className="space-y-6">{children}</div>
         </div>
 
-        {isChatLimitReached && (
-          <div className="bg-blue-50 border border-blue-200 rounded-lg p-4 mt-6">
-            <div className="flex items-center">
-              <FileText className="w-5 h-5 text-blue-600 mr-2" />
-              <div className="text-blue-800">
-                <p className="font-medium">{t('chatLimitReachedTitle')}</p>
-                <p className="text-sm mt-1">{t('chatLimitReachedDesc')}</p>
-              </div>
-            </div>
-          </div>
-        )}
-
         <div className="flex flex-col sm:flex-row sm:justify-between gap-4 mt-8">
           <Button variant="outline" className="w-full sm:w-auto">
             <Link href={`/questionnaire/${id}`}>{t('backToDetail')}</Link>
@@ -94,10 +81,10 @@ export function ResultContainer({ title, id, children, questionnaire, answers, q
               <Copy className="w-4 h-4 mr-2" />
               {t('copyResultLink')}
             </Button>
-            <Button 
-              variant={isChatLimitReached ? "default" : "outline"} 
-              onClick={handleCopyResultData} 
-              className={`w-full sm:w-auto ${isChatLimitReached ? 'bg-blue-600 hover:bg-blue-700 text-white animate-pulse' : ''}`}
+            <Button
+              variant="outline"
+              onClick={handleCopyResultData}
+              className="w-full sm:w-auto"
             >
               <FileText className="w-4 h-4 mr-2" />
               {t('copyResultData')}

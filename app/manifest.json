@@ -1,7 +1,7 @@
 {
   "name": "LXScale - Mental Health Assessment Platform",
   "short_name": "LXScale",
-  "description": "Professional mental health assessment platform with free psychological scales and AI analysis",
+  "description": "Professional mental health assessment platform with free psychological scales",
   "icons": [
     {
       "src": "/share/icon1.png",

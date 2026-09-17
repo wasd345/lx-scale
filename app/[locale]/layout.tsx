@@ -49,7 +49,7 @@ export const metadata: Metadata = {
   },
   openGraph: {
     title: 'LXScale - Free Mental Health Assessment Tools 🧠',
-    description: '🔬 Professional psychological assessment platform with AI analysis. Free depression, anxiety, OCD, and stress tests. Get instant results and professional insights.',
+    description: 'Professional psychological assessment platform with free depression, anxiety, OCD, and stress tests.',
     url: 'https://www.lxscale.xyz',
     siteName: 'LXScale',
     locale: 'en_US',
@@ -59,7 +59,7 @@ export const metadata: Metadata = {
         url: '/apple-icon.png',
         width: 180,
         height: 180,
-        alt: 'LXScale - Free Mental Health Assessment Platform with AI Analysis',
+        alt: 'LXScale - Free Mental Health Assessment Platform',
       },
     ],
   },
@@ -68,10 +68,10 @@ export const metadata: Metadata = {
     site: '@LXDAO_Official',
     creator: '@0xhardman', 
     title: 'LXScale - Free Mental Health Assessment Tools 🧠',
-    description: '🔬 Professional psychological scales | 🤖 AI analysis | 📊 Instant results | 🆓 Completely free - Start your mental health assessment now!',
+    description: 'Professional psychological scales | Instant results | Completely free - Start your mental health assessment now!',
     images: {
       url: '/apple-icon.png',
-      alt: 'LXScale - Free Mental Health Assessment Platform with AI Analysis',
+      alt: 'LXScale - Free Mental Health Assessment Platform',
     },
   },
   robots: {
